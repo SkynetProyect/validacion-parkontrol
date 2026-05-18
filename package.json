@@ -19,10 +19,14 @@
   },
   "homepage": "https://github.com/JoshhD01/parkontrol#readme",
   "devDependencies": {
+    "@argos-ci/playwright": "^7.0.0",
     "@percy/cli": "^1.31.13",
     "@percy/playwright": "^1.1.0",
     "@playwright/test": "^1.59.1",
-    "@argos-ci/playwright": "^7.0.0",
     "@types/node": "^25.6.0"
+  },
+  "dependencies": {
+    "@keploy/sdk": "^2.0.10",
+    "@reportportal/agent-js-playwright": "^5.4.0"
   }
 }

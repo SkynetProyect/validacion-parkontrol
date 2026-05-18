@@ -25,6 +25,7 @@
     "test:regresion": "cross-env NODE_ENV=test jest --config jest-regresion.config.ts"
   },
   "dependencies": {
+    "@keploy/sdk": "^2.0.10",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",

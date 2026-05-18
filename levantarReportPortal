@@ -1,2 +1,14 @@
-cd reportportal/deploy/docker
+cd reportportal
 docker compose up
+npx playwright test
+
+then use
+suoeradmin
+erebus
+
+for keploy:
+
+keploy record -c "npm run start"
+luego usa el front o corre los test de playwright
+finaliza el back con ctrl+c esto generara los tests en el back.
+ corres los test con keploy test

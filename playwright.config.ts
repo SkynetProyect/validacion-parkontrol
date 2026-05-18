@@ -23,16 +23,34 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    [process.env.CI ? 'dot' : 'list'],
-    [
-      '@argos-ci/playwright/reporter',
-      createArgosReporterOptions({
-        uploadToArgos: !!process.env.CI,
-        token: process.env.ARGOS_TOKEN,
-      }),
-    ],
+reporter: [
+  [process.env.CI ? 'dot' : 'list'],
+
+  [
+    '@argos-ci/playwright/reporter',
+    createArgosReporterOptions({
+      uploadToArgos: !!process.env.CI,
+      token: process.env.ARGOS_TOKEN,
+    }),
   ],
+
+  [
+    '@reportportal/agent-js-playwright',
+    {
+      apiKey: 'parkontrrol_Yh6LIOlJRLaHgr7k3fRyxDNxMhp_zenmxvrboqPn7Fpt23CYesde7WFhP0NhVyBV',
+      endpoint: 'http://localhost:8080/api/v1',
+      project: 'default_personal',
+      launch: 'Playwright Launch',
+      description: 'Testing comm systems',
+      attributes: [
+        {
+          key: 'env',
+          value: process.env.CI ? 'ci' : 'local',
+        },
+      ],
+    },
+  ],
+],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */

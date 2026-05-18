@@ -10,11 +10,11 @@ export default defineConfig({
 
     ['@reportportal/agent-js-playwright', {
 
-      apiKey: 'TU_API_KEY',
+      apiKey: 'parkontrrol_Yh6LIOlJRLaHgr7k3fRyxDNxMhp_zenmxvrboqPn7Fpt23CYesde7WFhP0NhVyBV',
 
-      endpoint: 'http://localhost:8080/api/v1',
+      endpoint: 'http://localhost:8080',
 
-      project: 'default_personal',
+      project: 'Parkontrol',
 
       launch: 'Playwright Launch',
 
