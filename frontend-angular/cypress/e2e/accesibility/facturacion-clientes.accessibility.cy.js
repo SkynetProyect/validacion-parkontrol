@@ -1,7 +1,7 @@
 // Facturación - Clientes - Accessibility Tests
 // Pruebas de accesibilidad WCAG 2.1 para creación de clientes
 
-import { loginAsAdmin, buildUniqueNumeroDocumento, buildUniqueCorreo } from '../support/helpers';
+import { loginAsAdmin, buildUniqueNumeroDocumento, buildUniqueCorreo } from '../../support/helpers';
 
 describe('Facturación - Clientes Accessibility Tests', () => {
   beforeEach(() => {

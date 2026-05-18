@@ -1,4 +1,5 @@
 import { expect, test, type Locator, type Page } from '@playwright/test';
+import { argosScreenshot } from '@argos-ci/playwright';
 import { loginAsAdmin } from './helpers/auth';
 
 async function openNuevoClienteModal(page: Page): Promise<Locator> {
@@ -42,6 +43,7 @@ test.describe('Facturacion - UI creacion de clientes', () => {
   test('1) crea cliente exitosamente con campos correctos', async ({ page }) => {
     const dialog = await openNuevoClienteModal(page);
     const controls = getClienteModalControls(dialog);
+    await argosScreenshot(page, 'facturacion-clientes/nuevo-cliente-modal');
     const numero = buildUniqueNumeroDocumento();
     const correo = buildUniqueCorreo();
 
@@ -55,6 +57,7 @@ test.describe('Facturacion - UI creacion de clientes', () => {
     await expect(page.locator('.mensaje-exito')).toContainText(
       `Cliente con numero documento ${numero} creado exitosamente`,
     );
+    await argosScreenshot(page, 'facturacion-clientes/cliente-creado-exitoso');
   });
 
   test('2) no permite crear cliente sin numero de identificacion', async ({ page }) => {

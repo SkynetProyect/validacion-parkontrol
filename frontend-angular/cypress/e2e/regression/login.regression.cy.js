@@ -1,7 +1,7 @@
 // Login - Regression Tests
 // Pruebas de regresión para funcionalidades básicas de login
 
-import { loginAsAdmin, loginAsOperator, loginAsUser, ADMIN_EMAIL, ADMIN_PASSWORD, OPERATOR_EMAIL, OPERATOR_PASSWORD, USER_EMAIL, USER_PASSWORD } from '../support/helpers';
+import { loginAsAdmin, loginAsOperator, loginAsUser, ADMIN_EMAIL, ADMIN_PASSWORD, OPERATOR_EMAIL, OPERATOR_PASSWORD, USER_EMAIL, USER_PASSWORD } from '../../support/helpers';
 
 describe('Login - Regression Tests', () => {
   beforeEach(() => {

@@ -1,7 +1,7 @@
 // Facturación - Clientes - Regression Tests
 // Pruebas de regresión para funcionalidades de creación de clientes
 
-import { loginAsAdmin, buildUniqueNumeroDocumento, buildUniqueCorreo } from '../support/helpers';
+import { loginAsAdmin, buildUniqueNumeroDocumento, buildUniqueCorreo } from '../../support/helpers';
 
 describe('Facturación - Clientes Regression Tests', () => {
   beforeEach(() => {
@@ -13,6 +13,7 @@ describe('Facturación - Clientes Regression Tests', () => {
   it('1) crea cliente exitosamente con campos correctos', () => {
     cy.get('button').contains(/\+ Nuevo Cliente/i).click();
     cy.get('mat-dialog-container').should('be.visible');
+    cy.argosScreenshot('facturacion-clientes/nuevo-cliente-modal');
 
     const numero = buildUniqueNumeroDocumento();
     const correo = buildUniqueCorreo();
@@ -25,6 +26,7 @@ describe('Facturación - Clientes Regression Tests', () => {
 
     cy.get('mat-dialog-container').should('not.exist');
     cy.get('.mensaje-exito').should('contain', numero);
+    cy.argosScreenshot('facturacion-clientes/cliente-creado-exitoso');
   });
 
   it('2) no permite crear cliente sin número de identificación', () => {
@@ -125,6 +127,7 @@ describe('Facturación - Clientes Regression Tests', () => {
 
     cy.get('mat-dialog-container').should('not.exist');
     cy.get('table, mat-table, .cliente-list').should('exist');
+    cy.argosScreenshot('facturacion-clientes/lista-clientes-post-creacion');
   });
 
   it('11) permite múltiples creaciones de clientes en sesión', () => {

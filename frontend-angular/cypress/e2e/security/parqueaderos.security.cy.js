@@ -1,7 +1,7 @@
 // Parqueaderos - Security Tests
 // Pruebas de seguridad para creación de parqueaderos
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Parqueaderos - Security Tests', () => {
   beforeEach(() => {

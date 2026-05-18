@@ -1,7 +1,7 @@
 // Reservas - Security Tests
 // Pruebas de seguridad para creación de reservas
 
-import { loginAsAdmin, buildUniqueNumeroVehiculo } from '../support/helpers';
+import { loginAsAdmin, buildUniqueNumeroVehiculo } from '../../support/helpers';
 
 describe('Reservas - Security Tests', () => {
   beforeEach(() => {

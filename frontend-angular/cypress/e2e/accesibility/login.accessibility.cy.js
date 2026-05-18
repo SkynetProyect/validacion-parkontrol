@@ -1,7 +1,7 @@
 // Login - Accessibility Tests
 // Pruebas de accesibilidad WCAG 2.1 para login
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Login - Accessibility Tests', () => {
   beforeEach(() => {

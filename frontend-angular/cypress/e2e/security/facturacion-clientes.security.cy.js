@@ -1,7 +1,7 @@
 // Facturación - Clientes - Security Tests
 // Pruebas de seguridad para creación de clientes
 
-import { loginAsAdmin, buildUniqueNumeroDocumento, buildUniqueCorreo } from '../support/helpers';
+import { loginAsAdmin, buildUniqueNumeroDocumento, buildUniqueCorreo } from '../../support/helpers';
 
 describe('Facturación - Clientes Security Tests', () => {
   beforeEach(() => {

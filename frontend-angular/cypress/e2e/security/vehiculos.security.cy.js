@@ -1,6 +1,6 @@
 // Vehículos - Security Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Vehículos - Security Tests', () => {
   beforeEach(() => {

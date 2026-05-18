@@ -1,6 +1,6 @@
 // Facturación - Facturas - Security Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Facturación - Facturas - Security Tests', () => {
   beforeEach(() => {

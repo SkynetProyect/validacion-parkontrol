@@ -1,6 +1,6 @@
 // Parqueaderos - Regression Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Parqueaderos - Regression Tests', () => {
   beforeEach(() => {

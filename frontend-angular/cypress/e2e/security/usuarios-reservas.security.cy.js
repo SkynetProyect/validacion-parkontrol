@@ -1,6 +1,6 @@
 // Usuarios - Reservas - Security Tests
 
-import { loginAsUser, buildUniqueNumeroVehiculo } from '../support/helpers';
+import { loginAsUser, buildUniqueNumeroVehiculo } from '../../support/helpers';
 
 describe('Usuarios - Reservas - Security Tests', () => {
   beforeEach(() => {

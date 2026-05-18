@@ -1,6 +1,6 @@
 // Facturación - Facturas - Accessibility Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Facturación - Facturas - Accessibility Tests', () => {
   beforeEach(() => {

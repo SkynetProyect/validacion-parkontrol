@@ -1,6 +1,6 @@
 // Vehículos - Regression Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Vehículos - Regression Tests', () => {
   beforeEach(() => {

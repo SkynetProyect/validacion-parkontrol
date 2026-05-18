@@ -1,7 +1,7 @@
 // Reservas - Accessibility Tests
 // Pruebas de accesibilidad WCAG 2.1 para reservas
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Reservas - Accessibility Tests', () => {
   beforeEach(() => {

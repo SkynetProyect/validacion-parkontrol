@@ -1,6 +1,6 @@
 // Tarifas - Accessibility Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Tarifas - Accessibility Tests', () => {
   beforeEach(() => {

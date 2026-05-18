@@ -1,6 +1,6 @@
 // Parqueaderos - Accessibility Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Parqueaderos - Accessibility Tests', () => {
   beforeEach(() => {

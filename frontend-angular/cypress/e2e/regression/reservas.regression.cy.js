@@ -1,7 +1,7 @@
 // Reservas - Regression Tests
 // Pruebas de regresión para funcionalidades de reservas
 
-import { loginAsAdmin, buildUniqueNumeroVehiculo } from '../support/helpers';
+import { loginAsAdmin, buildUniqueNumeroVehiculo } from '../../support/helpers';
 
 describe('Reservas - Regression Tests', () => {
   beforeEach(() => {

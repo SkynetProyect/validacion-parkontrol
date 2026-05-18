@@ -1,6 +1,6 @@
 // Pagos - Security Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Pagos - Security Tests', () => {
   beforeEach(() => {

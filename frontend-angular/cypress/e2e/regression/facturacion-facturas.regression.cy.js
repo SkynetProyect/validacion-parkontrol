@@ -1,6 +1,6 @@
 // Facturación - Facturas - Regression Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Facturación - Facturas - Regression Tests', () => {
   beforeEach(() => {

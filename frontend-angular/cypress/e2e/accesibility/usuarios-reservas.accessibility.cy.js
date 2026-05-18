@@ -1,6 +1,6 @@
 // Usuarios - Reservas - Accessibility Tests
 
-import { loginAsUser } from '../support/helpers';
+import { loginAsUser } from '../../support/helpers';
 
 describe('Usuarios - Reservas - Accessibility Tests', () => {
   beforeEach(() => {

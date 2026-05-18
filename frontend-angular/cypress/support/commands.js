@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('fill', { prevSubject: 'element' }, (subject, value) => {
+	const text = value == null ? '' : String(value);
+
+	const chain = cy.wrap(subject).clear({ force: true });
+
+	if (text.length === 0) {
+		return chain;
+	}
+
+	return chain.type(text, { force: true });
+});

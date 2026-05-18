@@ -1,6 +1,6 @@
 // Tarifas - Security, Accessibility, Regression Tests
 
-import { loginAsAdmin } from '../support/helpers';
+import { loginAsAdmin } from '../../support/helpers';
 
 describe('Tarifas - Security Tests', () => {
   beforeEach(() => {

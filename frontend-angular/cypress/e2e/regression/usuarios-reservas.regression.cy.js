@@ -1,6 +1,6 @@
 // Usuarios - Reservas - Regression Tests
 
-import { loginAsUser, buildUniqueNumeroVehiculo } from '../support/helpers';
+import { loginAsUser, buildUniqueNumeroVehiculo } from '../../support/helpers';
 
 describe('Usuarios - Reservas - Regression Tests', () => {
   beforeEach(() => {

@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { createArgosReporterOptions } from '@argos-ci/playwright/reporter';
 
 /**
  * Read environment variables from file.
@@ -22,31 +23,15 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
- reporter: [
-
-    ['html'],
-
-    ['list'],
-
-    ['@reportportal/agent-js-playwright', {
-
-      apiKey: 'TU_API_KEY',
-
-      endpoint: 'http://localhost:8080/api/v1',
-
-      project: 'default_personal',
-
-      launch: 'Playwright Launch',
-
-      description: 'Testing comm systems',
-
-      attributes: [
-        {
-          key: 'env',
-          value: 'dev'
-        }
-      ]
-    }]
+  reporter: [
+    [process.env.CI ? 'dot' : 'list'],
+    [
+      '@argos-ci/playwright/reporter',
+      createArgosReporterOptions({
+        uploadToArgos: !!process.env.CI,
+        token: process.env.ARGOS_TOKEN,
+      }),
+    ],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -55,6 +40,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
   },
 
   /* Configure projects for major browsers */
