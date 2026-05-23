@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test:playwright": "playwright test",
-    "test:playwright:percy": "percy exec -- playwright test --workers=1"
+    "test:playwright:percy": "percy exec -- playwright test --workers=1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,8 @@
     "@percy/cli": "^1.31.13",
     "@percy/playwright": "^1.1.0",
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0"
+    "@types/node": "^25.6.0",
+    "cypress": "^15.15.0"
   },
   "dependencies": {
     "@keploy/sdk": "^2.0.10",
