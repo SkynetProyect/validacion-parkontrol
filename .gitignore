@@ -1,6 +1,6 @@
-
 # Playwright
 node_modules/
+**/node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
@@ -8,3 +8,11 @@ node_modules/
 /playwright/.auth/
 frontend-angular/cypress/screenshots/
 frontend-angular/cypress/videos/
+
+# Python virtual envs
+.venv/
+**/.venv/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
