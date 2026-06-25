@@ -1,0 +1,6 @@
+aplicar patron de pruebas automatizadas screenplay.
+Este patron describe como pueden los usuarios interactuar con el sistema, 
+esto lo hace un (Actor) el cual conforme a algunas habilidades y tareas 
+
+Esto se hace para las pruebas end to end ( E2E ).
+

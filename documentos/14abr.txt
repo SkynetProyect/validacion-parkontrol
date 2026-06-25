@@ -1,0 +1,15 @@
+Existe una libreria en C# que permite hacer pruebas unitarias, llamada Fluent Assertions.
+Las asserts son una forma declarativa.
+
+Task: reemplazar las assertions por Fluent Assertions en las pruebas.
+
+java tiene Junit para unitarias, Mocktito para Mocks.
+
+vamos a empezar a realizar pruebas base con selenium para web y cypress para las end to end, al igual que playwright para ent to end de navegador.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+hay que hacer pruebas de regresion, pruebas de seguridad, pruebas de api, 
+	 pruebas de rendimiento.
+
+revisar de nuevo los principios first
+
